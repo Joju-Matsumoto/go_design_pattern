@@ -10,13 +10,13 @@ func NewBellPrinter() *BellPrinter {
 	return &BellPrinter{state: GetNightState()}
 }
 
-func (b *BellPrinter) Use(command string) {
-	switch command {
-	case "USE":
+func (b *BellPrinter) Use(c Command) {
+	switch c {
+	case UseCommand:
 		b.state.DoUse(b)
-	case "ALARM":
+	case AlarmCommand:
 		b.state.DoAlarm(b)
-	case "PHONE":
+	case PhoneCommand:
 		b.state.DoPhone(b)
 	}
 }

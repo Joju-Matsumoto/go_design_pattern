@@ -11,7 +11,7 @@ func main() {
 	bell := NewBellPrinter()
 
 	// commands := []string{"USE", "ALARM", "PHONE"}
-	commands := []string{"USE"}
+	commands := []Command{UseCommand}
 
 	go func() {
 		for {
